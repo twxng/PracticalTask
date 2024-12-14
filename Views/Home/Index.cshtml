@@ -2,7 +2,34 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="text-center mb-4">
+    <h1 class="display-4">Tag Helpers Demo</h1>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <card header="Card Example">
+            <p>This is a card created using our custom Card Tag Helper.</p>
+            <bs-button type="primary">Primary Button</bs-button>
+            <bs-button type="secondary" outline="true">Outline Secondary</bs-button>
+        </card>
+    </div>
+    
+    <div class="col-md-6">
+        <alert type="success" dismissible="true">
+            This is a dismissible success alert!
+        </alert>
+        
+        <alert type="warning">
+            This is a warning alert without dismiss button.
+        </alert>
+        
+        <card header="Button Examples" footer="Card Footer">
+            <div class="d-grid gap-2">
+                <bs-button type="primary" size="lg">Large Button</bs-button>
+                <bs-button type="info" size="sm">Small Button</bs-button>
+                <bs-button type="danger" outline="true">Outline Danger</bs-button>
+            </div>
+        </card>
+    </div>
 </div>
