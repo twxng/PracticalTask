@@ -1,34 +1,87 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Dark Theme Demo";
 }
 
-<div class="text-center mb-4">
-    <h1 class="display-4">Tag Helpers Demo</h1>
+<div class="text-center mb-5">
+    <h1 class="display-4">Стильні Tag Helpers</h1>
+    <p class="lead text-muted">Демонстрація кастомних компонентів у темному дизайні</p>
 </div>
 
-<div class="row">
+<div class="row g-4">
     <div class="col-md-6">
-        <card header="Card Example">
-            <p>This is a card created using our custom Card Tag Helper.</p>
-            <bs-button type="primary">Primary Button</bs-button>
-            <bs-button type="secondary" outline="true">Outline Secondary</bs-button>
+        <card header="Сповіщення">
+            <p class="text-muted mb-4">Приклади різних типів сповіщень з можливістю закриття</p>
+            
+            <alert type="danger" dismissible="true">
+                Критична помилка! Щось пішло не так.
+            </alert>
+            
+            <alert type="success" dismissible="true">
+                Операція успішно виконана!
+            </alert>
+            
+            <alert type="warning">
+                Увага! Важливе повідомлення.
+            </alert>
+        </card>
+
+        <card header="Статистика" footer="Оновлено сьогодні">
+            <div class="row text-center">
+                <div class="col-4">
+                    <h3 class="text-danger">150+</h3>
+                    <p class="text-muted">Користувачів</p>
+                </div>
+                <div class="col-4">
+                    <h3 class="text-danger">80%</h3>
+                    <p class="text-muted">Активність</p>
+                </div>
+                <div class="col-4">
+                    <h3 class="text-danger">24/7</h3>
+                    <p class="text-muted">Підтримка</p>
+                </div>
+            </div>
         </card>
     </div>
     
     <div class="col-md-6">
-        <alert type="success" dismissible="true">
-            This is a dismissible success alert!
-        </alert>
+        <card header="Елементи керування">
+            <p class="text-muted mb-4">Приклади різних варіантів кнопок</p>
+            
+            <div class="mb-4">
+                <h6 class="text-muted mb-3">Стандартні кнопки</h6>
+                <bs-button type="primary" size="lg">Головна дія</bs-button>
+                <bs-button type="danger">Видалити</bs-button>
+                <bs-button type="warning" size="sm">Попередження</bs-button>
+            </div>
+            
+            <div class="mb-4">
+                <h6 class="text-muted mb-3">Контурні кнопки</h6>
+                <bs-button type="primary" outline="true">Редагувати</bs-button>
+                <bs-button type="danger" outline="true">Скасувати</bs-button>
+            </div>
+            
+            <div>
+                <h6 class="text-muted mb-3">Кнопки на всю ширину</h6>
+                <div class="d-grid gap-2">
+                    <bs-button type="primary" size="lg">Зареєструватися</bs-button>
+                    <bs-button type="danger" outline="true">Увійти</bs-button>
+                </div>
+            </div>
+        </card>
         
-        <alert type="warning">
-            This is a warning alert without dismiss button.
-        </alert>
-        
-        <card header="Button Examples" footer="Card Footer">
-            <div class="d-grid gap-2">
-                <bs-button type="primary" size="lg">Large Button</bs-button>
-                <bs-button type="info" size="sm">Small Button</bs-button>
-                <bs-button type="danger" outline="true">Outline Danger</bs-button>
+        <card header="Прогрес">
+            <div class="mb-4">
+                <h6 class="text-muted mb-2">Завантаження</h6>
+                <div class="progress" style="height: 10px;">
+                    <div class="progress-bar bg-danger" role="progressbar" style="width: 75%"></div>
+                </div>
+            </div>
+            
+            <div>
+                <h6 class="text-muted mb-2">Активність</h6>
+                <div class="progress" style="height: 10px;">
+                    <div class="progress-bar bg-danger" role="progressbar" style="width: 90%"></div>
+                </div>
             </div>
         </card>
     </div>
