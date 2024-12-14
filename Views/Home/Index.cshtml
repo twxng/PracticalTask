@@ -1,88 +1,87 @@
-﻿@{
-    ViewData["Title"] = "Dark Theme Demo";
+@{
+	ViewData["Title"] = "Practical Task";
 }
 
 <div class="text-center mb-5">
-    <h1 class="display-4">Стильні Tag Helpers</h1>
-    <p class="lead text-muted">Демонстрація кастомних компонентів у темному дизайні</p>
+	<p class="lead text-muted">Custom component demonstration</p>
 </div>
 
 <div class="row g-4">
-    <div class="col-md-6">
-        <card header="Сповіщення">
-            <p class="text-muted mb-4">Приклади різних типів сповіщень з можливістю закриття</p>
-            
-            <alert type="danger" dismissible="true">
-                Критична помилка! Щось пішло не так.
-            </alert>
-            
-            <alert type="success" dismissible="true">
-                Операція успішно виконана!
-            </alert>
-            
-            <alert type="warning">
-                Увага! Важливе повідомлення.
-            </alert>
-        </card>
+	<div class="col-md-6">
+		<card header="Notifications">
+			<p class="text-muted mb-4">Examples of different types of notifications with the ability to close</p>
 
-        <card header="Статистика" footer="Оновлено сьогодні">
-            <div class="row text-center">
-                <div class="col-4">
-                    <h3 class="text-danger">150+</h3>
-                    <p class="text-muted">Користувачів</p>
-                </div>
-                <div class="col-4">
-                    <h3 class="text-danger">80%</h3>
-                    <p class="text-muted">Активність</p>
-                </div>
-                <div class="col-4">
-                    <h3 class="text-danger">24/7</h3>
-                    <p class="text-muted">Підтримка</p>
-                </div>
-            </div>
-        </card>
-    </div>
-    
-    <div class="col-md-6">
-        <card header="Елементи керування">
-            <p class="text-muted mb-4">Приклади різних варіантів кнопок</p>
-            
-            <div class="mb-4">
-                <h6 class="text-muted mb-3">Стандартні кнопки</h6>
-                <bs-button type="primary" size="lg">Головна дія</bs-button>
-                <bs-button type="danger">Видалити</bs-button>
-                <bs-button type="warning" size="sm">Попередження</bs-button>
-            </div>
-            
-            <div class="mb-4">
-                <h6 class="text-muted mb-3">Контурні кнопки</h6>
-                <bs-button type="primary" outline="true">Редагувати</bs-button>
-                <bs-button type="danger" outline="true">Скасувати</bs-button>
-            </div>
-            
-            <div>
-                <h6 class="text-muted mb-3">Кнопки на всю ширину</h6>
-                <div class="d-grid gap-2">
-                    <bs-button type="primary" size="lg">Зареєструватися</bs-button>
-                    <bs-button type="danger" outline="true">Увійти</bs-button>
-                </div>
-            </div>
-        </card>
-        
-        <card header="Прогрес">
-            <div class="mb-4">
-                <h6 class="text-muted mb-2">Завантаження</h6>
-                <div class="progress" style="height: 10px;">
-                    <div class="progress-bar bg-danger" role="progressbar" style="width: 75%"></div>
-                </div>
-            </div>
-            
-            <div>
-                <h6 class="text-muted mb-2">Активність</h6>
-                <div class="progress" style="height: 10px;">
-                    <div class="progress-bar bg-danger" role="progressbar" style="width: 90%"></div>
-                </div>
-            </div>
-        </card>
-    </div>
+			<alert type="danger" dismissible="true">
+				Critical error! Something went wrong.
+			</alert>
+
+			<alert type="success" dismissible="true">
+				Operation successfully completed!
+			</alert>
+
+			<alert type="warning">
+				Attention! Important message.
+			</alert>
+		</card>
+
+		<card header="Statistics" footer="Updated today">
+			<div class="row text-center">
+				<div class="col-4">
+					<h3 class="text-danger">150+</h3>
+					<p class="text-muted">Users</p>
+				</div>
+				<div class="col-4">
+					<h3 class="text-danger">80%</h3>
+					<p class="text-muted">Activity</p>
+				</div>
+				<div class="col-4">
+					<h3 class="text-danger">24/7</h3>
+					<p class="text-muted">Support</p>
+				</div>
+			</div>
+		</card>
+	</div>
+
+	<div class="col-md-6">
+		<card header="Control Elements">
+			<p class="text-muted mb-4">Examples of different button variants</p>
+
+			<div class="mb-4">
+				<h6 class="text-muted mb-3">Standard buttons</h6>
+				<bs-button type="primary" size="lg">Main action</bs-button>
+				<bs-button type="danger">Delete</bs-button>
+				<bs-button type="warning" size="sm">Warning</bs-button>
+			</div>
+
+			<div class="mb-4">
+				<h6 class="text-muted mb-3">Outline buttons</h6>
+				<bs-button type="primary" outline="true">Edit</bs-button>
+				<bs-button type="danger" outline="true">Cancel</bs-button>
+			</div>
+
+			<div>
+				<h6 class="text-muted mb-3">Full-width buttons</h6>
+				<div class="d-grid gap-2">
+					<bs-button type="primary" size="lg">Register</bs-button>
+					<bs-button type="danger" outline="true">Login</bs-button>
+				</div>
+			</div>
+		</card>
+
+		<card header="Progress">
+			<div class="mb-4">
+				<h6 class="text-muted mb-2">Loading</h6>
+				<div class="progress" style="height: 10px;">
+					<div class="progress-bar bg-danger" role="progressbar" style="width: 75%"></div>
+				</div>
+			</div>
+
+			<div>
+				<h6 class="text-muted mb-2">Activity</h6>
+				<div class="progress" style="height: 10px;">
+					<div class="progress-bar bg-danger" role="progressbar" style="width: 90%"></div>
+				</div>
+			</div>
+		</card>
+	</div>
 </div>
